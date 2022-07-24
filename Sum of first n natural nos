@@ -1,3 +1,4 @@
+//USING WHILE LOOP
 #include <iostream>
 
 using namespace std;
@@ -12,5 +13,39 @@ int main()
         num-=1;
     }
     cout<<sum;
+    return 0;
+}
+
+//USING FORMULA
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int num,sum=0;
+    cin>>num;
+    sum=num*(num+1)/2;
+    cout<<sum;
+    return 0;
+}
+
+//USING RECURSION
+#include <iostream>
+
+using namespace std;
+int sumoffirst(int num)
+{
+    if(num==0)
+    return num;
+    else
+    return num+sumoffirst(num-1);
+}
+int main()
+{
+    int num;
+    cin>>num;
+    int k=sumoffirst(num);
+    cout<<k;
     return 0;
 }
