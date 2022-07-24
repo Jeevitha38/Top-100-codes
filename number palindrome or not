@@ -1,0 +1,20 @@
+// num =123321 palindrome = reverse of number is same as original num
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int num,sum=0;
+    cin>>num;
+    int k=num; // reason mentioned below
+    while(num)
+    {
+        int k=num%10;
+        sum=sum*10+k;
+        num=num/10;
+    }
+    if(sum==k) cout<<"Palindrome"; //make sure sum==original num(since num value changes inside for loop)
+    else cout<<"Not a Palindrome";
+    return 0;
+}
