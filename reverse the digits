@@ -1,0 +1,18 @@
+//do sum of digits but mul by 10 in sum in each stage
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int num,sum=0;
+    cin>>num;
+    while(num)
+    {
+        int k=num%10;
+        sum=sum*10+k;
+        num=num/10;
+    }
+    cout<<sum;
+    return 0;
+}
