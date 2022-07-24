@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 int main()
@@ -8,7 +7,7 @@ int main()
     cin>>num;
     while(num)
     {
-        int k=num%10;
+        int k=num%10; //mod and then divide by 10
         sum+=k;
         num=num/10;
     }
