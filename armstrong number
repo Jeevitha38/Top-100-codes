@@ -1,0 +1,28 @@
+// 234 = 2^3 + 3^3 + 4^3
+// 1302 = 1^4 + 3^4 + 0^4 + 2^4
+//  if they are equal then it is armstrong number
+#include <iostream>
+#include<math.h>
+using namespace std;
+
+int main()
+{
+    int num,sum=0,count=0,n1=num,n2=num;
+    cin>>num;
+    while(num)
+    {
+        int k=num%10;
+        count++;
+        num=num/10;
+    }
+    while(n1)
+    {
+        int k=n1%10;
+        sum=sum+pow(k,count);
+        n1=n1/10;
+    }
+    cout<<n2<<" "<<sum;
+    if(n2==sum) cout<<"Armstrong";
+    else cout<<"Not an Armstrong";
+    return 0;
+}
