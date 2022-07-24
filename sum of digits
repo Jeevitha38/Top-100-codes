@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int num,sum=0;
+    cin>>num;
+    while(num)
+    {
+        int k=num%10;
+        sum+=k;
+        num=num/10;
+    }
+    cout<<sum;
+    return 0;
+}
