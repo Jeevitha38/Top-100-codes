@@ -1,0 +1,53 @@
+//BRUTE FORCE
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int num1,num2,num3;
+    cin>>num1>>num2>>num3;
+    if((num1>num2) && (num1>num3))
+    {
+        cout<<num1<<"is greater";
+    }
+    else if((num2>num3) && (num2>num1))
+    {
+        cout<<num2<<"is greater";
+    }
+    else
+    {
+        cout<<num3<<"is greater";
+    }
+
+    return 0;
+}
+
+//MAX FUNCTION
+#include <iostream>
+#include<math.h>
+using namespace std;
+
+int main()
+{
+    int num1,num2,num3;
+    cin>>num1>>num2>>num3;
+    int ans=max(num1,max(num2,num3));
+    cout<<ans;
+    return 0;
+}
+
+//TERNARY OPERATION
+#include <iostream>
+#include<math.h>
+using namespace std;
+
+int main()
+{
+    int num1,num2,num3;
+    cin>>num1>>num2>>num3;
+    int interans=(num1>num2)? num1:num2;
+    int ans=(num3>interans)?num3:interans;
+    cout<<ans<<"is greater";
+    return 0;
+}
