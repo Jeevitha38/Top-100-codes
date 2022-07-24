@@ -1,0 +1,51 @@
+//USING LOOP
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int num1,num2,sum=0;
+    cin>>num1>>num2;
+    while(num2>=num1)
+    {
+        sum+=num1;
+        num1+=1;
+    }
+    cout<<sum;
+    return 0;
+}
+
+//USING RECURSION
+#include <iostream>
+
+using namespace std;
+int sumrange(int num1,int num2)
+{
+    if(num1>num2)
+    return 0;
+    else
+    return num1+sumrange(num1+1,num2);
+}
+int main()
+{
+    int num1,num2,sum=0;
+    cin>>num1>>num2;
+    int ans=sumrange(num1,num2);
+    cout<<ans;
+    return 0;
+}
+
+//USING FORMULA
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int num1,num2,sum=0;
+    cin>>num1>>num2;
+    sum=num2*(num2+1)/2 - num1*(num1+1)/2 + num1; // for 2 to 5 :  5*(5+1)/2 - 2*(2+1)/2 so 2 is excluded so we add 2 
+    cout<<sum;
+    return 0;
+}
